@@ -1,0 +1,11 @@
+<h1> View of the recipe!<h2>
+<h2>Recipe: <%= @recipe.name %></h2>
+<h3>Cook Time: <%= @recipe.cook_time %></h3>
+<p>Ingredients: <%= @recipe.ingredients %></p>
+<form method="POST" action="/recipes/<%= @recipe.id %>">  
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="delete">
+<br>
+<a href="/recipes">Back to index</a>
+<a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe?
+</form>
